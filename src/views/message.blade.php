@@ -7,7 +7,7 @@
         ])
     @else
         <div class="callout callout-{{ $message['level'] }} callout-dismissible
-            {{ $message['important'] ? 'callout-important' : '' }}"
+            {{ $message['important'] ? 'callout-important' : '' }}
         ">
             <button type="button" class="close" data-dismiss="callout" aria-hidden="true">
                 <i class="fa fa-times"></i>
