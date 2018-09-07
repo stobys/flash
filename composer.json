@@ -1,5 +1,5 @@
 {
-    "name": "stobys/flash",
+    "name": "stobys/laravel-flash",
     "description": "Laravel flash notifications, fork of laracasts/flash",
     "license": "MIT",
     "authors": [
