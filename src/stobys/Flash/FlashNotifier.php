@@ -39,9 +39,9 @@ class FlashNotifier
      * @param  string|null $message
      * @return $this
      */
-    public function info($message = null)
+    public function info($message = null, $title = null, $icon = null)
     {
-        return $this->message($message, 'info');
+        return $this->message($message, 'info', $title, $icon);
     }
 
     /**
@@ -50,9 +50,9 @@ class FlashNotifier
      * @param  string|null $message
      * @return $this
      */
-    public function success($message = null)
+    public function success($message = null, $title = null, $icon = null)
     {
-        return $this->message($message, 'success');
+        return $this->message($message, 'success', $title, $icon);
     }
 
     /**
@@ -61,9 +61,9 @@ class FlashNotifier
      * @param  string|null $message
      * @return $this
      */
-    public function error($message = null)
+    public function error($message = null, $title = null, $icon = null)
     {
-        return $this->message($message, 'danger');
+        return $this->message($message, 'danger', $title, $icon);
     }
 
     /**
@@ -72,9 +72,9 @@ class FlashNotifier
      * @param  string|null $message
      * @return $this
      */
-    public function warning($message = null)
+    public function warning($message = null, $title = null, $icon = null)
     {
-        return $this->message($message, 'warning');
+        return $this->message($message, 'warning', $title, $icon);
     }
 
     /**
@@ -84,7 +84,7 @@ class FlashNotifier
      * @param  string|null $level
      * @return $this
      */
-    public function message($message = null, $level = null)
+    public function message($message = null, $level = null, $title = null, $icon = null)
     {
         // If no message was provided, we should update
         // the most recently added message.

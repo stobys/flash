@@ -40,6 +40,13 @@ class Message implements \ArrayAccess
     public $overlay = false;
 
     /**
+     * The icon of the message.
+     *
+     * @var string
+     */
+    public $icon;
+
+    /**
      * Create a new message instance.
      *
      * @param array $attributes

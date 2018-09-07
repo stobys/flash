@@ -6,20 +6,24 @@
             'body'       => $message['message']
         ])
     @else
-        <div class="alert
-                    alert-{{ $message['level'] }}
-                    {{ $message['important'] ? 'alert-important' : '' }}"
-                    role="alert"
-        >
-            @if ($message['important'])
-                <button type="button"
-                        class="close"
-                        data-dismiss="alert"
-                        aria-hidden="true"
-                >&times;</button>
+        <div class="callout callout-{{ $message['level'] }} callout-dismissible
+            {{ $message['important'] ? 'callout-important' : '' }}"
+        ">
+            <button type="button" class="close" data-dismiss="callout" aria-hidden="true">
+                <i class="fa fa-times"></i>
+            </button>
+            @if ($message['title'])
+            <h4>
+                @if ($message['icon'])
+                    <i class="icon fa fa-{{ $message['icon'] }}"></i>
+                @endif
+                {{ $message['title'] }}
+            </h4>
             @endif
 
-            {!! $message['message'] !!}
+            <p>
+                {!! $message['message'] !!}
+            </p>
         </div>
     @endif
 @endforeach
