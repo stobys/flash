@@ -1,11 +1,11 @@
 {
-    "name": "laracasts/flash",
-    "description": "Easy flash notifications",
+    "name": "stobys/flash",
+    "description": "Laravel flash notifications, fork of laracasts/flash",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jeffrey Way",
-            "email": "jeffrey@laracasts.com"
+            "name": "Sławomir 'SylveK' Tobys",
+            "email": "s.tobys@gmail.com"
         }
     ],
     "require": {
@@ -18,20 +18,20 @@
     },
     "autoload": {
         "psr-0": {
-            "Laracasts\\Flash": "src/"
+            "stobys\\Flash": "src/"
         },
         "files": [
-            "src/Laracasts/Flash/functions.php"
+            "src/stobys/Flash/functions.php"
         ]
     },
     "minimum-stability": "stable",
     "extra": {
         "laravel": {
             "providers": [
-                "Laracasts\\Flash\\FlashServiceProvider"
+                "stobys\\Flash\\FlashServiceProvider"
             ],
             "aliases": {
-                "Flash": "Laracasts\\Flash\\Flash"
+                "Flash": "stobys\\Flash\\Flash"
             }
         }
     }
